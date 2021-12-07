@@ -1,4 +1,35 @@
+/*Aufgabenstellung für Server
+verpflichtend
+
+
+Implementieren Sie einen lokalen Node.js Server, welcher zwei Routen (Pfadnamen) verarbeitet.
+
+Der abgelegte Server soll auf dem Port 3000 erreichbar sein.
+
+Die erste Route stellt den Default-Pfad ("/") dar und soll den String "Server erreichbar" zurückgeben.
+
+Die zweite Route soll über den Pfad ("/convertDate)" erreichbar sein. Wenn der Pfad aufgerufen wird, soll ein Date-Parameter entgeben genommen, verarbeitet und in folgendem Format zurückgegeben werden:
+// Beispielrückgabe
+ Day: 3, Month: December, Year: 2021
+Aufgabenstellung für Client
+verpflichtend
+
+
+Erstellen Sie eine neue HTML-Seite, welche ein Formular mit einem Input-Feld vom Typ Datum enthält (Diese Webseite soll als Client für den Server dienen).
+
+Füge Sie ihrer HTML-Datei ein Button hinzu, welcher durch ein Click-Event die Formulardaten mit Hilde der HTTP-Anfragemethode GET an den Server weitergeben. Zum senden der Daten an den Server soll die Fetch-Funktion benutzt werden.
+
+Die Rückgabe vom Server sollen auf der Webseite ausgegeben werden.
+*/
+//import* as http from "http";
+
 let idElements: number = 0; //Counter fuer Klassenelemente
+
+const hostname: string = "127.0.0.1";
+const port: number = 3000;
+
+//const server: http.Server = http.createServer(
+ 
 
 class AngelegteEvents{
 
@@ -108,6 +139,6 @@ function addTableEntry(eventitem: AngelegteEvents): void {
     entry.appendChild(preis);
     entry.appendChild(deleteF);
 
-    document.getElementById("table2").appendChild(entry);
+    document.getElementById("tabelleEvents")!.appendChild(entry); 
 }
 
